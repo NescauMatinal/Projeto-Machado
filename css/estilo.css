@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+/*Variáveis são espaços na memória que vão armazenar alguma coisa*/
+
+:root{
+    --cor1:#A5E1E9; /*Azul*/
+    --cor2:#F8CADC;/*Rosa*/
+    --cor3:#C4BDF3;/*Roxo*/
+    --cor4:#FCE8A5; /*Amarelo*/
+    --cor5:#FFC296; /*Laranja*/
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*tag, #id, .class */
+
+body{
+    background-color: var(--cor1);
+    font-family: sans-serif;
+}
+
+header{
+    background-image: linear-gradient(to top, var(--cor4), var(--cor5));/*direção do gradiente, corInicial, corTerminal*/
+    min-height: 130px;/*altura mínima*/
+    text-align: center;
+    padding-top: 50px;/*Espaço dentro da caixa de 50px para cima*/
+    padding-bottom: 20px;
+}
+
+header > h1{
+    color: var(--preto);
+    font-weight: 900;/*100 a 900, ligther, bold, bolder*/
+    margin-bottom: 20px;/*Espaçamento fora da 'caixa'*/
+}
+
+header > p{
+    color: var(--preto);
+   
+}
+
+nav{
+    background-color: var(--cor4);
+    padding: 10px;
+    box-shadow: 1px 1px 3px var(--preto);/*(x, y, extensão, cor*/
+    
+}
+
+nav > a{
+  color: #000;
+  padding: 10px;
+  text-decoration: none;/*none, solid, dotted, dashed*/
+  font-weight: bold;
+  border-radius: 3px;/*Arredondamento das bordas*/
+  transition-duration: 0.5s;/*Duração da transição para o outro estado*/
+}
+
+nav > a:hover{/*pseudo-classe - adiciona um estado especial ao elemento*/
+    background-color: var(--cor3);
+}
+
+main{
+    background-color: #fff;
+    color: #000;
+    min-width: 320px; /*Largura mínima*/
+    max-width: 1000px; /*LArgura máxima*/
+    margin: auto;/*Utilizado nesse contexto para centralizar*/
+    margin-top: 3px;
+    padding: 20px;/*espaço dentro da caixa do elemento*/
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;/*Alinhamento de texto - center, left, right, justify*/
+    box-shadow: 3px 2px 5px 0px;/*Sombra de caixa*/
+
+}
+
+main h2{
+    background-image: linear-gradient(to right, var(--cor1), transparent);/*(a direção, a cor que começa, a cor que termina)*/
+    padding: 5px 0;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+main p{
+    font-size: 1.2rem;
+    text-align: justify;
+    text-indent: 30px;/*Espaçamento de primeira linha de parágrafo*/
+    margin: 15px 0;
+}
+
+main > img{
+    width: 30%;
+    border: 10px double #000;/*border: espessura estilo cor*/
+}
+
+iframe{
+    width: 90%;
+    border: 10px double #000;
+    margin-bottom: 10px;
+
+}
+
+pre{
+    font-size: 16px;
+    
+}
+
+figcaption{
+    font-size: 10px;
+}
+
+aside{
+    background-color: var(--cor4);
+    padding: 20px 0;
+}
+
+aside > ul{
+    list-style-position: inside;/*Posição do marcador da lista*/
+}
+
+aside h3 {
+    background-color: var(--cor02);
+    padding: 10px;
+    margin: -15px -0.5px 0px -0.5px ;
+}
+
+.item{
+    width: 200px; /*Largura*/
+    height: 200px; /*Altura*/
+    background-color: var(--cor2);/*Cor de fundo*/
+    text-align: left;/*alinhamento de texto, center, left, right, justify*/
+    line-height: 10px;/*Altura da Linha*/
+    box-shadow: 0 0 25px var(--cor2);
+    border-radius: 30px;
+    color: black;
+}
+
+section > p{
+    font-size: 15px;/*Tamanho da fonte*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container{
+    background-color: var(--cor3);
+    min-height: 100vh;/*Viewport height*/
+    display: flex; /*flexbox*/
+    flex-direction: row;/*direção do flex - row,column, row-reverse, column-reverse*/
+    column-gap: 20px;/*Distância entre as colunas dentro do flex*/
+    flex-wrap: wrap; /*quebra de linha dos itens (wrap, nowrap)*/
+    row-gap: 20px; /*Distância entre as linhas dentro do flex*/
+    justify-content: center;/*Direção como linha - faz o alinhamento na horizontal. Direção como coluna - faz o alinhamento na vertical (center, start, end, space-between, space-around, space-evenly*/
+    align-items: center; /*Se estiver como linha, o alinhamento é feito na vertical. e a direção etiver como coluna, o alinhamento éfeito na horizontal. - flex-start, flex-end, space-around*/
+
+
+}
+
+.item img{
+    width: 150px;
+}
